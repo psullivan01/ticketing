@@ -12,9 +12,101 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </head>
-  <body>
 
+  <body>
     <div class="container">
+        <div class="row">
+          <div class="col-4">
+      <form onsubmit="sendUser(event)">
+        <h3 style="text-align:center;">Add User</h3>
+        <div class="form-group">
+          <label for="name-field">First Name</label>
+          <input type="text" class="form-control" id="firstName" name="firstName-field" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="name-field">Last Name</label>
+          <input type="text" class="form-control" id="lastName" name="lastName-field" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="userSubmit" class="btn btn-primary btn-lg btn-block">Submit User</button>
+        </div>
+      </div>
+      </form>
+
+      <div class="col-8">
+      <form onsubmit="sendTicket(event)">
+        <h3 style="text-align:center;">Add Ticket</h3>
+        <div id="name-select" class="form-group" name="userSelect">
+          <label for="subject-field">Select User</label>
+          <select class="form-control" required>
+            <option value="Consulting">Adam Ziegele</option>
+            <option value="Web Development">Patrick Sullivan</option>
+            <option value="Marshall Mathers">Marshall Mathers</option>
+            <option value="Tupac Shakur">Tupac Shakur</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="body-field">Ticket Description</label>
+          <textarea id="body-field" name="body-field" class="form-control" placeholder="Type your message here" required></textarea>
+        </div>
+        <div class="form-group row">
+          <label for="example-date-input" class="col-2 col-form-label">Due Date</label>
+          <div class="col-10">
+            <input class="form-control" type="date" value="2018-04-20" id="example-date-input">
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="ticketSubmit" class="btn btn-primary btn-lg btn-block">Submit Ticket</button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+<br>
+  <div class="container">
+      <div class="row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>User</th>
+              <th>Ticket Description</th>
+              <th>Due Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Adam Ziegele</td>
+              <td>Fix the table</td>
+              <td>04/20/2018</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Patrick Sullivan/td>
+              <td>Fix the table</td>
+              <td>04/20/2018</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Tupac Shakur</td>
+              <td>Fix the table</td>
+              <td>04/20/2018</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+    <!-- <div class="container">
       <div class="row">
         <div class="col-4">
           <form>
@@ -47,7 +139,7 @@
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </body>
 </html>
